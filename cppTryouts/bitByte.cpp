@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <bitset>
 
 typedef  unsigned char byte;
 /* Print n as a binary number */
@@ -48,4 +49,10 @@ unsigned char reverse_byte (byte num)
 
 
     return output;
+}
+
+void printbitfloat(float f){
+    float *fp = &f;
+    int i = *(reinterpret_cast<int*>(fp));
+    std::cout << std::bitset<32>(i)<<"\t\t"<<f<<"\n";
 }
