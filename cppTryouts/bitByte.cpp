@@ -2,6 +2,17 @@
 #include <stdio.h>
 
 typedef  unsigned char byte;
+/* Print n as a binary number */
+inline void printBits(unsigned int num)
+{
+   
+    for(int bit=0;bit<(sizeof(unsigned int) * 8); bit++)
+    {
+        printf("%i ", num & 0x01);
+        num = num >> 1;
+    }
+    std::cout << "\n";
+}
 
 /* Print n as a binary number */
 inline void printBits(unsigned char n)
